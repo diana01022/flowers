@@ -1,0 +1,318 @@
+/* style.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#f5f5f3;
+  color:#111;
+}
+
+img{
+  width:100%;
+  display:block;
+  border-radius:20px;
+  object-fit:cover;
+}
+
+section{
+  padding:80px 8%;
+}
+
+/* NAVBAR */
+
+.navbar{
+  width:100%;
+  padding:30px 8%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  border-bottom:1px solid #ccc;
+}
+
+.logo{
+  font-family:'Playfair Display', serif;
+  font-size:1.5rem;
+  font-weight:900;
+}
+
+.nav-links{
+  display:flex;
+  gap:40px;
+}
+
+.nav-links button{
+  background:transparent;
+  border:none;
+  color:#111;
+  font-size:.9rem;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  cursor:pointer;
+  padding:0;
+}
+
+.nav-links button:hover{
+  color:#f7c600;
+}
+
+.menu-btn{
+  display:none;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero h1{
+  font-family:'Playfair Display', serif;
+  font-size:7rem;
+  line-height:1;
+  margin-bottom:40px;
+}
+
+.hero-image img{
+  height:600px;
+}
+
+.hero-content{
+  text-align:center;
+  max-width:700px;
+  margin:60px auto 0;
+}
+
+.small-title{
+  font-size:.8rem;
+  letter-spacing:2px;
+  margin-bottom:20px;
+}
+
+.hero-content h2{
+  font-size:2.5rem;
+  line-height:1.2;
+  margin-bottom:25px;
+}
+
+button{
+  border:none;
+  background:#f7c600;
+  padding:14px 28px;
+  cursor:pointer;
+  font-weight:700;
+  border-radius:40px;
+  transition: background .2s ease;
+}
+
+button:hover{
+  background:#e6b202;
+}
+
+.section-text,
+.contact-details{
+  max-width:700px;
+  margin:0 auto;
+  line-height:1.8;
+  font-size:1rem;
+}
+
+.contact-details p{
+  margin-top:20px;
+}
+
+/* IMAGE STRIP */
+
+.image-strip{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.image-strip img{
+  height:250px;
+}
+
+/* SERVICES */
+
+.section-title{
+  text-align:center;
+  margin-bottom:100px;
+}
+
+.section-title h2{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+
+.services{
+  display:flex;
+  flex-direction:column;
+  gap:120px;
+}
+
+.service-card{
+  text-align:center;
+  border-top:1px solid #ccc;
+  padding-top:60px;
+}
+
+.number{
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:30px;
+}
+
+.service-card img{
+  width:120px;
+  height:120px;
+  margin:0 auto 30px;
+}
+
+.service-card h3{
+  font-size:2rem;
+  margin-bottom:20px;
+}
+
+.service-card p{
+  max-width:500px;
+  margin:auto;
+  line-height:1.7;
+}
+
+/* GALLERY */
+
+.gallery-title{
+  margin-bottom:60px;
+}
+
+.gallery-title h2{
+  font-size:4rem;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.gallery-item img{
+  height:350px;
+}
+
+.gallery-item.large{
+  grid-column:span 2;
+}
+
+.gallery-item.large img{
+  height:350px;
+}
+
+/* CTA */
+
+.cta-image{
+  position:relative;
+}
+
+.cta-image img{
+  height:500px;
+}
+
+.cta-overlay{
+  position:absolute;
+  inset:0;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  padding:40px;
+  color:white;
+}
+
+.cta-overlay h2{
+  font-size:6rem;
+  align-self:center;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+.cta-bottom{
+  display:flex;
+  justify-content:space-between;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+  .hero h1{
+    font-size:5rem;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .image-strip{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .nav-links{
+    position:absolute;
+    top:90px;
+    right:8%;
+
+    background:white;
+
+    flex-direction:column;
+    padding:20px;
+
+    display:none;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero h1{
+    font-size:3.5rem;
+  }
+
+  .hero-image img{
+    height:400px;
+  }
+
+  .hero-content h2{
+    font-size:2rem;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-item.large{
+    grid-column:span 1;
+  }
+
+  .image-strip{
+    grid-template-columns:1fr;
+  }
+
+}
